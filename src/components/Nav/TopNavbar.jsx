@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
-import { NavLink } from 'react-router-dom';
+import { NavLink, Link } from 'react-router-dom';
 // Components
 import Sidebar from "../Nav/Sidebar";
 import Backdrop from "../Elements/Backdrop";
@@ -26,9 +26,9 @@ export default function TopNavbar() {
       {sidebarOpen && <Backdrop toggleSidebar={toggleSidebar} />}
       <Wrapper className="flexCenter animate whiteBg" style={y > 100 ? { height: "60px" } : { height: "80px" }}>
         <NavInner className="container flexSpaceCenter">
-          <NavLink className="pointer flexNullCenter" to="/" smooth={true}>
+          <Link className="pointer flexNullCenter" to="/" smooth={true}>
             <img src={LogoIcon} alt="company logo" width={100} height={70} />
-          </NavLink>
+          </Link>
           <BurderWrapper className="pointer" onClick={() => toggleSidebar(!sidebarOpen)}>
             <BurgerIcon />
           </BurderWrapper>
