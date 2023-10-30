@@ -25,7 +25,7 @@ export default function AboutUs() {
                                 <StartDiv className="font18">
                                     Let's seal the deal and move forward!
                                 </StartDiv>
-                                <StartButton className="font15">
+                                <StartButton className="font15" href="/contact">
                                     Get Started
                                 </StartButton>
                             </HeaderInfo>
@@ -60,13 +60,14 @@ const HeaderInfo = styled.div`
 const StartDiv = styled.div`
   margin: 20px 0;
 `
-const StartButton = styled.button`
+const StartButton = styled.a`
   border: 1px solid #7620ff;
   border-radius: 15px;
   background-color: #7620ff;
   padding: 15px;
   outline: none;
   color: #fff;
+  cursor: pointer;
   :hover {
     background-color: #580cd2;
     border: 1px solid #7620ff;

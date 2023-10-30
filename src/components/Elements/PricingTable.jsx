@@ -1,73 +1,61 @@
 import React from "react";
 import styled from "styled-components";
-// Components
-import FullButton from "../Buttons/FullButton";
-// Assets
-import RollerIcon from "../../assets/svg/Services/RollerIcon";
-import MonitorIcon from "../../assets/svg/Services/MonitorIcon";
-import BrowserIcon from "../../assets/svg/Services/BrowserIcon";
-import PrinterIcon from "../../assets/svg/Services/PrinterIcon";
-import CheckMark from "../../assets/svg/Checkmark";
 
-export default function PricingTable({ icon, price, title, text,  offers, action }) {
-  let getIcon;
-
-  switch (icon) {
-    case "roller":
-      getIcon = <RollerIcon />;
-      break;
-    case "monitor":
-      getIcon = <MonitorIcon />;
-      break;
-    case "browser":
-      getIcon = <BrowserIcon />;
-      break;
-    case "printer":
-      getIcon = <PrinterIcon />;
-      break;
-    default:
-      getIcon = <RollerIcon />;
-      break;
-  }
-
+export default function Pricing() {
   return (
-    <Wrapper className="whiteBg radius8 shadow">
-      <div className="flexSpaceCenter">
-        {getIcon}
-        <p className="font30 extraBold">{price}</p>
-      </div>
-      <div style={{ margin: "30px 0" }}>
-        <h4 className="font30 extraBold">{title}</h4>
-        <p className="font13">{text}</p>
-      </div>
-      <div>
-        {offers
-          ? offers.map((item, index) => (
-              <div className="flexNullCenter" style={{ margin: "15px 0" }} key={index}>
-                <div style={{ position: "relative", top: "-1px", marginRight: "15px" }}>
-                  {item.cheked ? (
-                    <div style={{ minWidth: "20px" }}>
-                      <CheckMark />
-                    </div>
-                  ) : (
-                    <div style={{ minWidth: "20px" }}></div>
-                  )}
-                </div>
-                <p className="font20 extraBold">{item.name}</p>
-              </div>
-            ))
-          : null}
-      </div>
-      <div style={{ maxWidth: "120px", margin: "30px auto 0 auto" }}>
-        <FullButton title="Buy" action={action} />
+    <Wrapper id="pricing">
+      <div className="whiteBg">
+        <div className="container">
+          <HeaderInfo>
+            <h1 className="font40 extraBold">GROWTH</h1>
+            <p className="font18">
+              All fees for marketing, advertising and building your brand on Amazon will come out of our budget with NO added expenses to your brand. 
+              <br />
+              We are 100% sure you will be happy with our business relationship and know that we can grow sales on Amazon substantially. 
+            </p>
+            <StartDiv className="font18">
+              Let's seal the deal and move forward!
+            </StartDiv>
+            <StartButton className="font15" href="/contact">
+              Get Started
+            </StartButton>
+          </HeaderInfo>
+        </div>
       </div>
     </Wrapper>
   );
 }
 
-const Wrapper = styled.div`
+const Wrapper = styled.section`
   width: 100%;
-  text-align: left;
-  padding: 20px 30px;
-  margin-top: 30px;
+  padding: 50px 0;
 `;
+
+const HeaderInfo = styled.div`
+  text-align: center;
+  margin-bottom: 50px;
+  @media (max-width: 860px) {
+    text-align: center;
+  }
+`;
+
+const StartDiv = styled.div`
+  margin: 20px 0;
+`
+const StartButton = styled.a`
+  border: 1px solid #7620ff;
+  border-radius: 15px;
+  background-color: #7620ff;
+  padding: 15px;
+  outline: none;
+  color: #fff;
+  cursor: pointer;
+  :hover {
+    background-color: #580cd2;
+    border: 1px solid #7620ff;
+    color: #fff;
+  }
+  @media (max-width: 991px) {
+    margin: 0 auto;
+  }
+`
