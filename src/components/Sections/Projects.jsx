@@ -28,7 +28,6 @@ export default function Projects() {
                 title="Brand Control"
                 text="Many brands do not have the expertise to conquer the Amazon marketplace. We establish and enforce policies to prevent over-saturation, ensure MAP compliance, and keep your brand presence unpolluted.
                 "
-                action={() => alert("clicked")}
               />
             </div>
             <div className="col-xs-12 col-sm-4 col-md-4 col-lg-4">
@@ -36,7 +35,6 @@ export default function Projects() {
                 img={ProjectImg2}
                 title="Content Management"
                 text="Optimize search results and watch click-through rates skyrocket with quality content that drives consumers to purchase. We work with Amazon's premium support to clean up content and get your products to top-rate status."
-                action={() => alert("clicked")}
               />
             </div>
             <div className="col-xs-12 col-sm-4 col-md-4 col-lg-4">
@@ -44,7 +42,6 @@ export default function Projects() {
                 img={ProjectImg3}
                 title="Promotion and Sales"
                 text="As one of the largest sellers on Amazon, we know how to build brands that truly `make it` on their platform. Our in-house marketing experts are primed to get your products seen and grow your sales to the next level."
-                action={() => alert("clicked")}
               />
             </div>
           </div>
