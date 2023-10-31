@@ -1,6 +1,6 @@
-import React from "react";
+import React, {useEffect} from "react";
 import { Helmet } from "react-helmet";
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, useLocation } from 'react-router-dom';
 
 // Screens
 import Landing from "./screens/Landing.jsx";
@@ -11,6 +11,33 @@ import TopNavbar from "./components/Nav/TopNavbar.jsx";
 import Contact from "./screens/Contact.jsx";
 
 export default function App() {
+
+  const location = useLocation();
+  
+  useEffect(() => {
+    document.title = location.pathname;
+    switch (location.pathname) {
+      case '/':
+        document.title = "Home"
+        break;
+      case '/about':
+        document.title = "About Us"
+        break;
+      case '/whyus':
+        document.title = "Why Us"
+        break;
+      case '/brands':
+        document.title = "Brands"
+        break;
+      case '/contact':
+        document.title = "Contact"
+        break;
+      default:
+        document.title = "Home"
+        break;
+    }
+  }, [location]);
+
   return (
     <>
       <Helmet>
@@ -20,7 +47,7 @@ export default function App() {
       </Helmet>
       <TopNavbar />
       <Routes>
-          <Route path="/" element={<Landing />} />
+          <Route path="/" element={<Landing />} title="Home" />
           <Route path="/about" element={<AboutUs />} />
           <Route path="/whyus" element={<WhyUs />} />
           <Route path="/brands" element={<Brands />} />
