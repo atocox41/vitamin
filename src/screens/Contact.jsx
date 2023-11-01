@@ -4,20 +4,21 @@ import { Navigate  } from 'react-router-dom';
 // Assets
 import ContactImg1 from "../assets/img/8.jpg";
 import emailjs from '@emailjs/browser';
+import { ColorRing } from 'react-loader-spinner';
 
 export default function Contact() {
 
   const form = useRef();
   const [redirect, setRedirect] = useState(false);
+  const [loading, setLoading] = useState(false);
 
   const sendEmail = (e) => {
     e.preventDefault();
+    setLoading(true);
 
-    
-    emailjs.sendForm('service_iap1eub', 'template_4fmqtfp', form.current, 'ooLQ5QW94-uEen8iy')
-    // emailjs.sendForm('service_w8qiwsk', 'template_51scj2c', form.current, 'qYhnZkrCzGsiua_9p')
+    emailjs.sendForm('service_w8qiwsk', 'template_51scj2c', form.current, 'qYhnZkrCzGsiua_9p')
       .then((result) => {
-          console.log("success:", result);
+          setLoading(false);
           setRedirect(true);
       }, (error) => {
           console.log(error.text);
@@ -115,6 +116,17 @@ export default function Contact() {
 
                         <SumbitWrapper className="flex">
                             <ButtonInput type="submit" value="Send Message" className="pointer animate radius8" style={{ maxWidth: "220px" }} />
+                            {loading && (
+                                <ColorRing   
+                                  height="40"
+                                  width="40"
+                                  ariaLabel="blocks-loading"
+                                  wrapperStyle={{}}
+                                  wrapperClass="blocks-wrapper"
+                                  colors={['#e15b64', '#f47e60', '#f8b26a', '#abbd81', '#849b87']}
+                                  visible={true}
+                                />
+                              )} 
                         </SumbitWrapper>
                           
                       </Form>
@@ -189,12 +201,3 @@ const SumbitWrapper = styled.div`
     margin-bottom: 50px;
   }
 `;
-
-
-
-
-
-
-
-
-
