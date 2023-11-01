@@ -14,7 +14,8 @@ export default function Contact() {
     e.preventDefault();
 
     
-    emailjs.sendForm('service_w8qiwsk', 'template_51scj2c', form.current, 'qYhnZkrCzGsiua_9p')
+    emailjs.sendForm('service_iap1eub', 'template_4fmqtfp', form.current, 'ooLQ5QW94-uEen8iy')
+    // emailjs.sendForm('service_w8qiwsk', 'template_51scj2c', form.current, 'qYhnZkrCzGsiua_9p')
       .then((result) => {
           console.log("success:", result);
           setRedirect(true);
