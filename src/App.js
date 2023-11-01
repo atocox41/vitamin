@@ -1,6 +1,7 @@
 import React, {useEffect} from "react";
 import { Helmet } from "react-helmet";
 import { Routes, Route, useLocation } from 'react-router-dom';
+import emailjs from "@emailjs/browser";
 
 // Screens
 import Landing from "./screens/Landing.jsx";
@@ -8,7 +9,9 @@ import AboutUs from "./screens/AboutUs.jsx";
 import WhyUs from "./screens/WhyUs.jsx";
 import Brands from "./screens/Brands.jsx";
 import TopNavbar from "./components/Nav/TopNavbar.jsx";
+import Footer from "./components/Sections/Footer.jsx";
 import Contact from "./screens/Contact.jsx";
+import ThankYou from "./screens/Thankyou.jsx";
 
 export default function App() {
 
@@ -32,6 +35,9 @@ export default function App() {
       case '/contact':
         document.title = "Contact"
         break;
+      case '/thankyou':
+        document.title = "Thank you"
+        break;
       default:
         document.title = "Home"
         break;
@@ -52,8 +58,13 @@ export default function App() {
           <Route path="/whyus" element={<WhyUs />} />
           <Route path="/brands" element={<Brands />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/thankyou" element={<ThankYou />} />
        </Routes>
+       <Footer />
     </>
   );
 }
 
+//template id: template_6ymc7vf
+//email service id:  service_c75mv7f
+//public key: 

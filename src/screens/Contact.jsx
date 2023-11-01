@@ -1,13 +1,35 @@
-import React from "react";
+import React, {Fragment, useState, useRef} from "react";
 import styled from "styled-components";
+import { Navigate  } from 'react-router-dom';
 // Assets
 import ContactImg1 from "../assets/img/8.jpg";
-import Footer from "../components/Sections/Footer";
-
+import emailjs from '@emailjs/browser';
 
 export default function Contact() {
+
+  const form = useRef();
+  const [redirect, setRedirect] = useState(false);
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    
+    emailjs.sendForm('service_w8qiwsk', 'template_51scj2c', form.current, 'qYhnZkrCzGsiua_9p')
+      .then((result) => {
+          console.log("success:", result);
+          setRedirect(true);
+      }, (error) => {
+          console.log(error.text);
+      });
+  };
+
   return (
     <>
+      {redirect && (
+        <Fragment>
+          <Navigate to='/thankyou' />  
+        </Fragment>
+      )}   
         <Wrapper id="contact">
             <div className="lightBg">
                 <div className="container">
@@ -16,7 +38,7 @@ export default function Contact() {
                 </HeaderInfo>
                 <div className="row" style={{ paddingBottom: "30px" }}>
                     <div className="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-                      <Form>
+                      <Form ref={form} onSubmit={sendEmail}>
                           <div className="row">
                             <div className="col-xs-12 col-sm-12 col-md-6 col-lg-6">
                               <label className="font13">Full Name:</label>
@@ -27,13 +49,6 @@ export default function Contact() {
                               <input type="text" id="lname" name="lname" className="font20 extraBold" />
                             </div>
                           </div>
-
-                          {/* <div className="row">
-                            <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                              <label className="font13">Address:</label>
-                              <input type="text" id="address" name="address" className="font20 extraBold" required/>
-                            </div>
-                          </div> */}
 
                           <div className="row">
                             <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12">
@@ -96,11 +111,13 @@ export default function Contact() {
                               <textarea rows="4" cols="50" type="text" id="message" name="message" className="font20 extraBold" />
                             </div>
                           </div>
+
+                        <SumbitWrapper className="flex">
+                            <ButtonInput type="submit" value="Send Message" className="pointer animate radius8" style={{ maxWidth: "220px" }} />
+                        </SumbitWrapper>
                           
                       </Form>
-                      <SumbitWrapper className="flex">
-                          <ButtonInput type="submit" value="Send Message" className="pointer animate radius8" style={{ maxWidth: "220px" }} />
-                      </SumbitWrapper>
+
                     </div>
                     <div className="col-xs-12 col-sm-12 col-md-6 col-lg-6">
                       <ContactImg src={ContactImg1} alt="office" />
@@ -109,7 +126,6 @@ export default function Contact() {
                 </div>
             </div>
         </Wrapper>
-        <Footer />
     </>
 
   );
@@ -147,14 +163,14 @@ const Form = styled.form`
 `;
 const ButtonInput = styled.input`
   border: 1px solid #7620ff;
-  background-color: #7620ff;
-  width: 100%;
+  background-color: #7620ff !important;
+  max-width: 150px !important;
   padding: 15px;
   outline: none;
   color: #fff;
+  height: 43px !important;
   :hover {
     background-color: #580cd2;
-    border: 1px solid #7620ff;
     color: #fff;
   }
   @media (max-width: 991px) {

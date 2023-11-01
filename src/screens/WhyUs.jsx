@@ -1,15 +1,9 @@
 import React from "react";
 import styled from "styled-components";
 
-// Sections
-import TopNavbar from "../components/Nav/TopNavbar";
-import Footer from "../components/Sections/Footer";
-import AboutUsImg from "../assets/img/aboutus.jpg"
-
 export default function WhyUs() {
   return (
     <>
-      <TopNavbar />
         <Wrapper id="whyus">
             <div className="whiteBg">
                 <div className="container">
@@ -19,7 +13,7 @@ export default function WhyUs() {
                         </div>
                         <div className="col-xs-12 col-sm-6 col-md-6 col-lg-6">
                             <HeaderInfo>
-                               <svg xmlns="http://www.w3.org/2000/svg" color="#19b934" fill="#19b934" viewBox="0 0 70 70" width="50" height="50" data-icon-name="wp-shopping_cart_thin"> 
+                               <svg xmlns="http://www.w3.org/2000/svg" color="#19b934" fill="#19b934" viewBox="0 0 70 70" width="70" height="70" data-icon-name="wp-shopping_cart_thin"> 
                                     <g id="1997962545"> 
                                         <circle cx="26" cy="58" r="2" id="1485723066"></circle> 
                                         <circle cx="54" cy="58" r="2" id="1900399009"></circle> 
@@ -32,13 +26,13 @@ export default function WhyUs() {
                                 </svg>
                                 <HeaderDescription>
                                     {/* <h1 className="font40 extraBold">It Works</h1> */}
-                                    <h1 className="font15">we are personally invested.</h1>
+                                    <h1 className="font25">we are personally invested.</h1>
                                 </HeaderDescription>
                             </HeaderInfo>
                         </div>
                         <div className="col-xs-12 col-sm-6 col-md-6 col-lg-6">
                             <HeaderInfo>
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="#f7cf4e" width="50" height="50" viewBox="0 0 70 70" class="svg u_1287142624" data-icon-name="wp-bullhorn_thin"> <path d="M53,17c-0.4,0-0.8,0.1-1.1,0.2c0,0-38.6,12.7-39.2,12.8c-1.6,0.5-2.7,2.5-2.7,5s1.1,4.5,2.7,5c0.2,0.1,4.4,1.4,9.9,3.2
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="#f7cf4e" width="70" height="70" viewBox="0 0 70 70" class="svg u_1287142624" data-icon-name="wp-bullhorn_thin"> <path d="M53,17c-0.4,0-0.8,0.1-1.1,0.2c0,0-38.6,12.7-39.2,12.8c-1.6,0.5-2.7,2.5-2.7,5s1.1,4.5,2.7,5c0.2,0.1,4.4,1.4,9.9,3.2
                                     l-0.4,1.1c-0.8,2.4,0.4,5,2.8,5.8l7.3,2.6c0.5,0.2,1,0.3,1.6,0.3c0.7,0,1.4-0.2,2-0.5c1.1-0.5,2-1.5,2.4-2.6l0.5-1.4
                                     c7.1,2.3,13.1,4.3,13.1,4.3c0.4,0.1,0.7,0.2,1.1,0.2c4.5,0,7-9.3,7-18S57.5,17,53,17z M12,35c0-1.9,0.8-2.9,1.3-3
                                     c0.4-0.1,25.9-8.5,35.5-11.6C47,23.8,46,29.5,46,35s1,11.2,2.8,14.7C39.2,46.5,13.7,38.2,13.3,38C12.8,37.9,12,36.9,12,35z
@@ -47,7 +41,7 @@ export default function WhyUs() {
                                 </svg>
                                 <HeaderDescription>
                                     {/* <h1 className="font40 extraBold">It Works</h1> */}
-                                    <h1 className="font15">we do Large Orders and pay upfront.</h1>
+                                    <h1 className="font25">we do Large Orders and pay upfront.</h1>
                                 </HeaderDescription>
                             </HeaderInfo>
                         </div>
@@ -55,7 +49,7 @@ export default function WhyUs() {
                     <div className="row">
                         <div className="col-xs-12 col-sm-6 col-md-6 col-lg-6">
                             <HeaderInfo>
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="#f7cf4e" width="50" height="50" viewBox="0 0 100 100" id="1851405415" class="svg u_1851405415" data-icon-name="li_award"> <g id="1072261451"> <path d="M50,23.5c-11,0-19.9,8.9-19.9,19.9S39,63.3,50,63.3s19.9-8.9,19.9-19.9S61,23.5,50,23.5z M50,60.9
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="#f7cf4e" width="70" height="70" viewBox="0 0 100 100" id="1851405415" class="svg u_1851405415" data-icon-name="li_award"> <g id="1072261451"> <path d="M50,23.5c-11,0-19.9,8.9-19.9,19.9S39,63.3,50,63.3s19.9-8.9,19.9-19.9S61,23.5,50,23.5z M50,60.9
                                         c-9.6,0-17.5-7.8-17.5-17.5C32.5,33.8,40.4,26,50,26s17.5,7.8,17.5,17.5C67.5,53.1,59.6,60.9,50,60.9z" id="1264674352"></path> 
                                     <path d="M88.3,73.7L75.6,61l2.2-1.3V51l4.4-7.6l-4.4-7.6v-8.7l-7.6-4.4l-4.4-7.6h-8.7l-7.6-4.4L42,15.2h-8.7l-4.4,7.6l-7.6,4.4v8.7
                                         L17,43.4l4.4,7.6v8.7l2.7,1.6L11.7,73.7c-0.4,0.4-0.5,0.9-0.3,1.4s0.6,0.8,1.2,0.8h11.2v11.2c0,0.5,0.3,1,0.8,1.2
@@ -68,13 +62,13 @@ export default function WhyUs() {
                                 </svg>
                                 <HeaderDescription>
                                     {/* <h1 className="font40 extraBold">It Works</h1> */}
-                                    <h1 className="font15">we invest time and energy to expand your brand on amazon.</h1>
+                                    <h1 className="font25">we invest time and energy to expand your brand on amazon.</h1>
                                 </HeaderDescription>
                             </HeaderInfo>
                         </div>
                         <div className="col-xs-12 col-sm-6 col-md-6 col-lg-6">
                             <HeaderInfo>
-                               <svg xmlns="http://www.w3.org/2000/svg" fill="#19b934" width="50" height="50" viewBox="0 0 100 100" id="1759294943" class="svg u_1759294943" data-icon-name="business_office_building"> <title id="1403877298">new_icons-2</title> 
+                               <svg xmlns="http://www.w3.org/2000/svg" fill="#19b934" width="70" height="70" viewBox="0 0 100 100" id="1759294943" class="svg u_1759294943" data-icon-name="business_office_building"> <title id="1403877298">new_icons-2</title> 
                                     <path d="M69.36,79.4H30.64a1.14,1.14,0,0,1-1.14-1.14v-54a1.14,1.14,0,0,1,1.14-1.14H69.36a1.14,1.14,0,0,1,1.14,1.14v54A1.14,1.14,0,0,1,69.36,79.4ZM31.77,77.13H68.23V25.38H31.77Z" id="1873665213"></path> 
                                     <path d="M84,86.39H16a1.14,1.14,0,0,1-1.14-1.14v-7A1.14,1.14,0,0,1,16,77.13H84a1.14,1.14,0,0,1,1.14,1.14v7A1.14,1.14,0,0,1,84,86.39ZM17.1,84.12H82.9V79.4H17.1Z" id="1270383866"></path> 
                                     <path d="M21.3,79.4a1.14,1.14,0,0,1-1.14-1.14V73.58a1.14,1.14,0,1,1,2.27,0v4.68A1.14,1.14,0,0,1,21.3,79.4Z" id="1798091863"></path> 
@@ -113,20 +107,20 @@ export default function WhyUs() {
                                 </svg>
                                 <HeaderDescription>
                                     {/* <h1 className="font40 extraBold">It Works</h1> */}
-                                    <h1 className="font15">we are top ranking so we have the experience.</h1>
+                                    <h1 className="font25">we are top ranking so we have the experience.</h1>
                                 </HeaderDescription>
                             </HeaderInfo>
                         </div>
 
                         <div className="col-xs-12 col-sm-6 col-md-6 col-lg-6">
                             <HeaderInfo>
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="#19b934" width="50" height="50" viewBox="0 0 100 100" id="1077038188" class="svg u_1077038188"      data-icon-name="business_globe_sidewards_arrow"> 
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="#19b934" width="70" height="70" viewBox="0 0 100 100" id="1077038188" class="svg u_1077038188"      data-icon-name="business_globe_sidewards_arrow"> 
                                     <title id="1965078432">new_icons</title> 
                                     <path d="M87.12,46.87l-5.89-2.51A30.34,30.34,0,0,0,76.52,33a1.11,1.11,0,0,0-.33-.48,30.4,30.4,0,0,0-49.77.1,1.12,1.12,0,0,0-.16.23A30.24,30.24,0,0,0,20.92,50c0,.68,0,1.37.07,2.06-2.34-.6-4.78-1.3-7.33-2.12a1.12,1.12,0,0,0-1.09,1.89,83.61,83.61,0,0,0,9.91,7.79,30.42,30.42,0,0,0,54.79,6.26l3.9,7.26a1.12,1.12,0,0,0,1,.59h.17a1.12,1.12,0,0,0,.92-.9l4.52-24.72A1.12,1.12,0,0,0,87.12,46.87Zm-63.94,2a28,28,0,0,1,4.67-14.44h9.1a50.4,50.4,0,0,0-2.3,14.44ZM39.3,34.44H50.22V48.88H36.88A47.54,47.54,0,0,1,39.3,34.44Zm24.88,2.65L64,37a1.12,1.12,0,0,0-1.42,1.56l2.35,4.37.53,1c.18,1.57.29,3.18.33,4.79l-.08.06,0,0-.1.08H52.45V34.44H63.36Q63.81,35.72,64.18,37.09ZM61.71,51.21l-.11.05a36.75,36.75,0,0,1-9.14,2.94V51.12h9.44Zm-9.26-19V21.91c3.91.62,7.56,4.44,10.05,10.3ZM50.22,21.9v10.3H40.16c.35-.83.73-1.64,1.14-2.4C43.76,25.17,46.9,22.41,50.22,21.9Zm0,29.21v3.45l-.92.12h-.08l-1,.11-.26,0-.86.07a64.73,64.73,0,0,1-10-.06c-.11-1.23-.18-2.48-.2-3.73ZM66.75,38.19q-.45-2-1-3.75h9.15a28.08,28.08,0,0,1,3.84,8.85Zm6.49-6H64.92a25,25,0,0,0-6-9.36A28.06,28.06,0,0,1,73.23,32.21ZM43.7,22.87a22.13,22.13,0,0,0-4.38,5.89,33.35,33.35,0,0,0-1.58,3.45H29.5A28.26,28.26,0,0,1,43.7,22.87ZM23.18,51.12H34.64c0,1.18.08,2.36.18,3.52a95.46,95.46,0,0,1-11.55-2C23.23,52.12,23.2,51.62,23.18,51.12ZM61.79,69.37c-2.47,5-5.83,8.16-9.34,8.72V69.91a49.86,49.86,0,0,0,7.08-.24l.6-.07.43-.05,1.18-.16ZM40.5,68l.28.08.52.14.89.22.37.09,1,.23.2,0,1.2.24h0a51.4,51.4,0,0,0,5.16.69v8.32c-3.87-.59-7.47-4.25-10-10.13ZM25.65,61.62l.43.25.34.2.56.32.84.47.33.18.73.39.28.14q1.08.56,2.16,1.06h0a59.12,59.12,0,0,0,6,2.42l.19.06a25.63,25.63,0,0,0,6.25,10A28,28,0,0,1,25.65,61.62ZM59,77.14a24.15,24.15,0,0,0,5.5-8.24A46.52,46.52,0,0,0,74.9,65.46,28.1,28.1,0,0,1,59,77.14Zm22.67-7.85L78.25,63,78,62.54a1.12,1.12,0,0,0-.7-.55h0l-.19,0h-.29l-.16,0-.06,0-.18.09a41.32,41.32,0,0,1-13.33,4.76l-.81.14-.45.08h-.1l-1.08.16-.6.08-.7.08-.28,0A48.66,48.66,0,0,1,46.2,67l-.39-.07-.1,0C37.65,65.45,28.12,61.71,18,53.59q2,.55,3.93,1h0l.08,0,1.23.29.24.05a90.12,90.12,0,0,0,16.09,2.28l.49,0h.29l.62,0,.91,0h1.51l.87,0h.12C55.5,57,62.35,53.84,66.15,51.23a19,19,0,0,0,3-2.51h0l.1-.11h0l.08-.09v0l.06-.07h0l0-.05h0l0,0h0l0,0a1.11,1.11,0,0,0,.15-.26v0l0-.11v0a1.11,1.11,0,0,0,0-.13v0a1.12,1.12,0,0,0,0-.14s0,0,0,0a1.11,1.11,0,0,0-.13-.47l-3.62-6.73,19.36,8.25Z" id="1905584009"></path> 
                                 </svg>
                                 <HeaderDescription>
                                     {/* <h1 className="font40 extraBold">It Works</h1> */}
-                                    <h1 className="font15">we have industry relationships that we use for you.</h1>
+                                    <h1 className="font25">we have industry relationships that we use for you.</h1>
                                 </HeaderDescription>
                             </HeaderInfo>
                         </div>
@@ -134,7 +128,6 @@ export default function WhyUs() {
                 </div>
             </div>
         </Wrapper>
-      <Footer />
     </>
   );
 }
@@ -142,6 +135,9 @@ export default function WhyUs() {
 const Wrapper = styled.section`
   width: 100%;
   padding: 100px 20px;
+  min-height: calc(100vh - 90px);
+  justify-content: center;
+  align-items: center;
 `;
 
 const HeaderInfo = styled.div`
@@ -156,5 +152,5 @@ const HeaderInfo = styled.div`
 
 const HeaderDescription = styled.div`
   position: absolute;
-  margin: 12px 0 0 60px;
+  margin: 10px 0 0 90px;
 `
