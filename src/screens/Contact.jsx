@@ -16,7 +16,8 @@ export default function Contact() {
     e.preventDefault();
     setLoading(true);
 
-    emailjs.sendForm('service_w8qiwsk', 'template_51scj2c', form.current, 'qYhnZkrCzGsiua_9p')
+   
+   emailjs.sendForm('service_w8qiwsk', 'template_51scj2c', form.current, 'qYhnZkrCzGsiua_9p')
       .then((result) => {
           setLoading(false);
           setRedirect(true);
@@ -43,74 +44,73 @@ export default function Contact() {
                       <Form ref={form} onSubmit={sendEmail}>
                           <div className="row">
                             <div className="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-                              <label className="font13">Full Name:</label>
-                              <input type="text" id="fname" name="fname" className="font20 extraBold" required/>
+                              <label className="font15 extraBold">Full Name:</label>
+                              <input type="text" id="fname" name="fname" className="font20" required/>
                             </div>
                             <div className="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-                              <label className="font13">Last Name:</label>
-                              <input type="text" id="lname" name="lname" className="font20 extraBold" />
+                              <label className="font15 extraBold">Last Name:</label>
+                              <input type="text" id="lname" name="lname" className="font20" />
                             </div>
                           </div>
 
                           <div className="row">
                             <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                              {/* <label className="font13">Address</label> <br/> */}
-                              <label className="font13">Street Address:</label>
-                              <input type="text" id="staddress1" name="staddress1" className="font20 extraBold"/>
+                              <label className="font15 extraBold">Street Address:</label>
+                              <input type="text" id="staddress1" name="staddress1" className="font20"/>
                             </div>
                           </div>
 
                           <div className="row">
                             <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                              <label className="font13">Street Address Line2:</label>
-                              <input type="text" id="staddress2" name="staddress2" className="font20 extraBold"/>
+                              <label className="font15 extraBold">Street Address Line2:</label>
+                              <input type="text" id="staddress2" name="staddress2" className="font20"/>
                             </div>
                           </div>
 
                           <div className="row">
                             <div className="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-                              <label className="font13">City:</label>
-                              <input type="text" id="fname" name="fname" className="font20 extraBold" required/>
+                              <label className="font15 extraBold">City:</label>
+                              <input type="text" id="city" name="city" className="font20" required/>
                             </div>
                             <div className="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-                              <label className="font13">State/Province:</label>
-                              <input type="text" id="lname" name="lname" className="font20 extraBold" />
+                              <label className="font15 extraBold">State/Province:</label>
+                              <input type="text" id="province" name="province" className="font20" />
                             </div>
                           </div>
 
                           <div className="row">
                             <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                              <label className="font13">Portal/Zip code:</label>
-                              <input type="text" id="portal" name="portal" className="font20 extraBold"/>
+                              <label className="font15 extraBold">Portal/Zip code:</label>
+                              <input type="text" id="portal" name="portal" className="font20"/>
                             </div>
                           </div>
 
                           <div className="row">
                             <div className="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-                              <label className="font13">Phone Number:</label>
-                              <input type="text" id="email" name="email" className="font20 extraBold" required/>
+                              <label className="font15 extraBold">Phone Number:</label>
+                              <input type="phone" id="phone" name="phone" className="font20" required/>
                             </div>
                             <div className="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-                              <label className="font13">Email:</label>
-                              <input type="text" id="email" name="email" className="font20 extraBold" required/>
+                              <label className="font15 extraBold">Email:</label>
+                              <input type="email" id="email" name="email" className="font20" required/>
                             </div>
                           </div>
                           
                           <div className="row">
                             <div className="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-                              <label className="font13">How did you hear about us?:</label>
-                              <input type="text" id="email" name="email" className="font20 extraBold" required/>
+                              <label className="font15 extraBold">How did you hear about us?:</label>
+                              <input type="text" id="link" name="link" className="font20" required/>
                             </div>
                             <div className="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-                              <label className="font13">Please Specify:</label>
-                              <input type="text" id="email" name="email" className="font20 extraBold" required/>
+                              <label className="font15 extraBold">Please Specify:</label>
+                              <input type="text" id="spec" name="spec" className="font20" required/>
                             </div>
                           </div>
                           
                           <div className="row">
                             <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                              <label className="font13">Comment:</label>
-                              <textarea rows="4" cols="50" type="text" id="message" name="message" className="font20 extraBold" />
+                              <label className="font15 extraBold">Comment:</label>
+                              <textarea rows="4" cols="50" type="text" id="message" name="message" className="font20" />
                             </div>
                           </div>
 
@@ -140,7 +140,6 @@ export default function Contact() {
             </div>
         </Wrapper>
     </>
-
   );
 }
 
