@@ -140,12 +140,12 @@ export default function Brands() {
                                 <br />
                                 here are some of the brands we work with
                             </p>
-                        </HeaderInfo>
-                        <div className="whiteBg" style={{ padding: "50px 0" }}>
-                            <div className="container">
-                                <ClientSlider />
+                            <div className="whiteBg" style={{ paddingTop: "10px" }}>
+                                <div className="container">
+                                    <ClientSlider />
+                                </div>
                             </div>
-                        </div>
+                        </HeaderInfo>
 
                         {/* <BrandContact>
                             <StartButton className="font20" href="/contact">
@@ -170,7 +170,7 @@ const Wrapper = styled.section`
 
 const HeaderInfo = styled.div`
   text-align: center;
-  margin: 50px 0;
+  margin: 100px 0 50px 0;
   @media (max-width: 860px) {
     text-align: center;
   }
@@ -185,5 +185,3 @@ const BrandSVG = styled.svg`
  width: 100%;
  height: 100%;
 `
-
-
