@@ -8,7 +8,7 @@ export default function WhyUs() {
             <div className="whiteBg">
                 <div className="container">
                     <div className="row">
-                        <div className="textCenter marginBottom30 col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                        <div className="textCenter marginTop50 marginBottom30 col-xs-12 col-sm-12 col-md-12 col-lg-12">
                             <h1 className="font40 extraBold">It Works</h1>
                         </div>
                         <div className="col-xs-12 col-sm-6 col-md-6 col-lg-6">
@@ -134,8 +134,8 @@ export default function WhyUs() {
 
 const Wrapper = styled.section`
   width: 100%;
-  padding: 100px 20px;
-  min-height: calc(100vh - 90px);
+  padding: 190px 20px 50px 20px;
+  min-height: 100vh;
   justify-content: center;
   align-items: center;
 `;
