@@ -93,6 +93,20 @@ export default function Sidebar({ sidebarOpen, toggleSidebar }) {
             Contact
           </NavLink>
         </li>
+        <li className="semiBold font15 pointer">
+          <NavLink
+            onClick={() => toggleSidebar(!sidebarOpen)}
+            activeClass="active"
+            className="whiteColor"
+            style={{ padding: "10px 15px" }}
+            to="https://www.amazon.com/s?me=A26S1VJEZ1PHG7&marketplaceID=ATVPDKIKX0DER"
+            spy={true}
+            smooth={true}
+            offset={-60}
+          >
+            Our Store
+          </NavLink>
+        </li>
         {/* <li className="semiBold font15 pointer">
           <Link
             onClick={() => toggleSidebar(!sidebarOpen)}

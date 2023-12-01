@@ -27,7 +27,7 @@ export default function TopNavbar() {
       <Wrapper className="flexCenter animate whiteBg" style={y > 100 ? { height: "60px" } : { height: "80px" }}>
         <NavInner className="container flexSpaceCenter">
           <Link className="pointer flexNullCenter" to="/" smooth={true}>
-            <img src={LogoIcon} alt="company logo" width={100} height={50} />
+            <img src={LogoIcon} alt="company logo" height={50} width={100} />
           </Link>
           <BurderWrapper className="pointer" onClick={() => toggleSidebar(!sidebarOpen)}>
             <BurgerIcon />
@@ -61,6 +61,11 @@ export default function TopNavbar() {
             <li className="semiBold font15 pointer">
               <NavLink activeClass="active" style={{ padding: "10px 15px" }} to="/contact" spy={true} smooth={true} offset={-80}>
                 Contact
+              </NavLink>
+            </li>
+            <li className="semiBold font15 pointer">
+              <NavLink activeClass="active" style={{ padding: "10px 15px" }} to="https://www.amazon.com/s?me=A26S1VJEZ1PHG7&marketplaceID=ATVPDKIKX0DER" spy={true} smooth={true} offset={-80}>
+                Our Store
               </NavLink>
             </li>
           </UlWrapper>
